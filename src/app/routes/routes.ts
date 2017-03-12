@@ -4,7 +4,7 @@ import { AuthComponent } from "./../authModule/auth.component";
 import { SigninComponent } from "./../authModule/singin-component/singin.component";
 import { SignoutComponent } from "./../authModule/signout-component/signout.component";
 
-const routes: Routes = [
+export const routes: Routes = [
     {
         path: "", children: [
             { path: "", redirectTo: "", pathMatch: "full" },
@@ -19,11 +19,10 @@ const routes: Routes = [
 
             }
         ]
-    }
+    },
+    { path: "**", redirectTo: "test" }
 ];
 
 export const appRoutingProviders: any[] = [
 
 ];
-
-export default routes;
